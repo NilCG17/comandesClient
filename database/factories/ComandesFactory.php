@@ -17,7 +17,11 @@ class ComandesFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'mail' => $this->faker->email,
+            'data_comanda' => $this->faker->dateTimeBetween('now', '+1 week'),
+            'parking' => $this->faker->boolean(50),
+            'catering' => $this->faker->boolean(50),
+            'estat' => 'pendent',
         ];
     }
 }
